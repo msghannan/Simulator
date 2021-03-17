@@ -1,0 +1,16 @@
+[
+  {
+    "Id": 1,
+    "PumpName": "Pump1",
+    "Status": 2,
+    "Activatable": false,
+    "Conditions": "&& ventilClass.Status == 1",
+    "PumpPipeList": [
+      {
+        "Id": 1,
+        "PipeName": "Pipe5Active",
+        "Status": 2
+      }
+    ]
+  }
+]
