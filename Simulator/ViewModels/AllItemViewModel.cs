@@ -16,17 +16,17 @@ namespace Simulator.ViewModels
 
         public AllItemViewModel()
         {
-            string jsonValve = File.ReadAllText("DAL/Valve.json");
+            string jsonValve = File.ReadAllText(HttpContext.Current.Server.MapPath("~/DAL/Valve.json"));
             AllItemValve = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Valve>>(jsonValve);
 
-            string jsonPipe = File.ReadAllText("DAL/Pipe.json");
-            AllItemPipe = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Pipe>>(jsonPipe);
+            //string jsonPipe = File.ReadAllText("DAL/Pipe.json");
+            //AllItemPipe = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Pipe>>(jsonPipe);
 
-            string jsonPump = File.ReadAllText("DAL/Pump.json");
+            string jsonPump = File.ReadAllText(HttpContext.Current.Server.MapPath("~/DAL/Pump.json"));
             AllItemPump = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Pump>>(jsonPump);
 
-            string jsonTank = File.ReadAllText("DAL/Tank.json");
-            AllItemTank = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Tank>>(jsonTank);
+            //string jsonTank = File.ReadAllText("DAL/Tank.json");
+            //AllItemTank = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Tank>>(jsonTank);
         }
     }
 }

@@ -96,9 +96,6 @@
     <Compile Include="Models\Valve.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\AllItemViewModel.cs" />
-    <Compile Include="ViewModels\PipeViewModel.cs" />
-    <Compile Include="ViewModels\PumpViewModel.cs" />
-    <Compile Include="ViewModels\ValveViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="DAL\Valve.json" />
