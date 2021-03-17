@@ -89,9 +89,23 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Machine.cs" />
+    <Compile Include="Models\Pipe.cs" />
+    <Compile Include="Models\Pump.cs" />
+    <Compile Include="Models\Tank.cs" />
+    <Compile Include="Models\Valve.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\AllItemViewModel.cs" />
+    <Compile Include="ViewModels\PipeViewModel.cs" />
+    <Compile Include="ViewModels\PumpViewModel.cs" />
+    <Compile Include="ViewModels\ValveViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="DAL\Valve.json" />
+    <Content Include="DAL\Tank.json" />
+    <Content Include="DAL\Pump.json" />
+    <Content Include="DAL\Pipe.json" />
+    <Content Include="DAL\Values.json" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -102,7 +116,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

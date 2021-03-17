@@ -1,0 +1,8 @@
+[
+  {
+    "Id": 1,
+    "TankName": "Tank1",
+    "Status": 2,
+    "Fill": true
+  }
+]
