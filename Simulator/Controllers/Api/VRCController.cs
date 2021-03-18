@@ -26,5 +26,47 @@ namespace Simulator.Controllers.Api
 
             return Ok("Valve " + id + " status has been changed");
         }
+
+        public IHttpActionResult ToggleValve2(int id)
+        {
+            machine.ToggleValve2(id);
+
+            return Ok("Valve " + id + " status has been changed");
+        }
+
+        public IHttpActionResult ToggleValve3(int id)
+        {
+            machine.ToggleValve3(id);
+
+            return Ok("Valve " + id + " status has been changed");
+        }
+
+        public IHttpActionResult ToggleValve4(int id)
+        {
+            machine.ToggleValve4(id);
+
+            return Ok("Valve " + id + " status has been changed");
+        }
+
+        public IHttpActionResult ToggleValve5(int id)
+        {
+            machine.ToggleValve5(id);
+
+            return Ok("Valve " + id + " status has been changed");
+        }
+
+        public IHttpActionResult ReadyForEmpty(int id)
+        {
+            machine.ReadyForEmpty(id);
+
+            return Ok();
+        }
+
+        public IHttpActionResult ReadyForFill(int id)
+        {
+            machine.ReadyForFill(id);
+
+            return Ok();
+        }
     }
 }
