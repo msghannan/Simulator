@@ -1,7 +1,7 @@
 [
   {
     "Id": 1,
-    "TankName": "Tank1",
+    "TankName": "VRCTank",
     "Status": 2,
     "Fill": true
   }

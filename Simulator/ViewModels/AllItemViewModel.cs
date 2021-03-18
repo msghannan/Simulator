@@ -25,8 +25,8 @@ namespace Simulator.ViewModels
             string jsonPump = File.ReadAllText(HttpContext.Current.Server.MapPath("~/DAL/Pump.json"));
             AllItemPump = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Pump>>(jsonPump);
 
-            //string jsonTank = File.ReadAllText("DAL/Tank.json");
-            //AllItemTank = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Tank>>(jsonTank);
+            string jsonTank = File.ReadAllText(HttpContext.Current.Server.MapPath("~/DAL/Tank.json"));
+            AllItemTank = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Tank>>(jsonTank);
         }
     }
 }

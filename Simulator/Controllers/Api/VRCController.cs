@@ -13,17 +13,18 @@ namespace Simulator.Controllers.Api
         Machine machine = new Machine();
 
         [HttpPost]
-        public IHttpActionResult TogglePump(int id)
+        public IHttpActionResult TogglePump1(int id)
         {
             machine.TogglePump1(id);
 
-            return Ok("togglepump");
+            return Ok("Pump " + id + " status has been changed");
         }
 
-        //[HttpGet]
-        //public IHttpActionResult test()
-        //{
-        //    return Ok("Hi");
-        //}
+        public IHttpActionResult ToggleValve1(int id)
+        {
+            machine.ToggleValve1(id);
+
+            return Ok("Valve " + id + " status has been changed");
+        }
     }
 }
