@@ -67,5 +67,62 @@ namespace Simulator.Models
             string output = JsonConvert.SerializeObject(allItemViewModel.AllItemPump, Newtonsoft.Json.Formatting.Indented);
             System.IO.File.WriteAllText(PumpJsonPath, output);
         }
+
+        public void ToggleValve1(int id)
+        {
+            foreach (Tank t in allItemViewModel.AllItemTank.Where(t => t.Id == 1))
+            {
+                foreach (Valve v in allItemViewModel.AllItemValve)
+                {
+                    if (v.Id == id && t.ReadyForEmpty == true)
+                    {
+                        v.Activatable = true;
+
+                        switch (v.Status)
+                        {
+                            case 1:
+                                v.Status = 2;
+                                break;
+                            case 2:
+                                v.Status = 1;
+                                break;
+                        }
+                    }
+
+                    else if (v.Id == id)
+                    {
+                        v.Activatable = true;
+
+                        switch (v.Status)
+                        {
+                            case 1:
+                                v.Status = 2;
+                                break;
+                            case 2:
+                                v.Status = 1;
+                                break;
+                        }
+
+                        foreach (Pipe p in v.ValvePipeList)
+                        {
+                            switch (p.Status)
+                            {
+                                case 1:
+                                    p.Status = 2;
+                                    break;
+                                case 2:
+                                    p.Status = 1;
+                                    break;
+                            }
+                            break;
+                        }
+                    }
+                    break;
+                }
+            }
+            //CallFillAndEmptyTank();
+            string output = JsonConvert.SerializeObject(allItemViewModel.AllItemValve, Newtonsoft.Json.Formatting.Indented);
+            System.IO.File.WriteAllText(VentilJsonPath, output);
+        }
     }
 }
