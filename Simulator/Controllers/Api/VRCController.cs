@@ -18,7 +18,103 @@ namespace Simulator.Controllers.Api
         public IHttpActionResult GetPump1Details(int id)
         {
             var pumpDetails = allItemViewModel.AllItemPump.Where(p => p.Id == id);
-            return Ok(pumpDetails);
+            int idCheck = 1;
+            if(idCheck == id)
+            {
+                foreach(Pump p in allItemViewModel.AllItemPump)
+                {
+                    if(p.Id == id)
+                    {
+                        return Ok(pumpDetails);
+                    }
+                }
+            }
+            return NotFound();
+        }
+        [HttpGet]
+        public IHttpActionResult GetTank1Details(int id)
+        {
+            var tankDetails = allItemViewModel.AllItemTank.Where(t => t.Id == id);
+            int idCheck = 1;
+            if(idCheck == id)
+            {
+                foreach(Valve v in allItemViewModel.AllItemValve)
+                {
+                    if(v.Id == id)
+                    {
+                        return Ok(tankDetails);
+                    }
+                }
+            }
+            return NotFound();
+        }
+        [HttpGet]
+        public IHttpActionResult GetValve2Details(int id)
+        {
+            var valveDetails = allItemViewModel.AllItemValve.Where(v => v.Id == id);
+            int idCheck = 2;
+            if(idCheck == id)
+            {
+                foreach(Valve v in allItemViewModel.AllItemValve)
+                {
+                    if(v.Id == id)
+                    {
+                        return Ok(valveDetails);
+                    }
+                }
+            }
+            return NotFound();
+        }
+        [HttpGet]
+        public IHttpActionResult GetValve3Details(int id)
+        {
+            var valveDetails = allItemViewModel.AllItemValve.Where(v => v.Id == id);
+            int idCheck = 3;
+            if (idCheck == id)
+            {
+                foreach (Valve v in allItemViewModel.AllItemValve)
+                {
+                    if (v.Id == id)
+                    {
+                        return Ok(valveDetails);
+                    }
+                }
+            }
+            return NotFound();
+        }
+        [HttpGet]
+        public IHttpActionResult GetValve4Details(int id)
+        {
+            var valveDetails = allItemViewModel.AllItemValve.Where(v => v.Id == id);
+            int idCheck = 4;
+            if(idCheck == id)
+            {
+                foreach(Valve v in allItemViewModel.AllItemValve)
+                {
+                    if(v.Id == id)
+                    {
+                        return Ok(valveDetails);
+                    }
+                }
+            }
+            return NotFound();
+        }
+        [HttpGet]
+        public IHttpActionResult GetValve5Details(int id)
+        {
+            var valveDetails = allItemViewModel.AllItemValve.Where(v => v.Id == id);
+            int idCheck = 5;
+            if (idCheck == id)
+            {
+                foreach (Valve v in allItemViewModel.AllItemValve)
+                {
+                    if (v.Id == id)
+                    {
+                        return Ok(valveDetails);
+                    }
+                }
+            }
+            return NotFound();
         }
 
         [HttpPost]
