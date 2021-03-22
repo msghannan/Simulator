@@ -24,9 +24,17 @@ namespace Simulator.Controllers.Api
         [HttpPost]
         public IHttpActionResult TogglePump1(int id)
         {
-            machine.TogglePump1(id);
+            foreach(Pump p in allItemViewModel.AllItemPump)
+            {
+                if(p.Id == id)
+                {
+                    machine.TogglePump1(id);
+                    return Ok("Pump " + id + " status has been changed");
+                }
+            }
 
-            return Ok("Pump " + id + " status has been changed");
+            return NotFound();
+            
         }
 
         [HttpPost]
