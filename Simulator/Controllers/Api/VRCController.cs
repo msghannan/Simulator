@@ -14,6 +14,12 @@ namespace Simulator.Controllers.Api
         Machine machine = new Machine();
         AllItemViewModel allItemViewModel = new AllItemViewModel();
 
+
+
+
+
+        // GET METHODS
+
         [HttpGet]
         public IHttpActionResult GetPump1Details(int id)
         {
@@ -31,6 +37,7 @@ namespace Simulator.Controllers.Api
             }
             return NotFound();
         }
+
         [HttpGet]
         public IHttpActionResult GetTank1Details(int id)
         {
@@ -48,6 +55,7 @@ namespace Simulator.Controllers.Api
             }
             return NotFound();
         }
+
         [HttpGet]
         public IHttpActionResult GetValve2Details(int id)
         {
@@ -65,6 +73,7 @@ namespace Simulator.Controllers.Api
             }
             return NotFound();
         }
+
         [HttpGet]
         public IHttpActionResult GetValve3Details(int id)
         {
@@ -82,6 +91,7 @@ namespace Simulator.Controllers.Api
             }
             return NotFound();
         }
+
         [HttpGet]
         public IHttpActionResult GetValve4Details(int id)
         {
@@ -99,6 +109,7 @@ namespace Simulator.Controllers.Api
             }
             return NotFound();
         }
+
         [HttpGet]
         public IHttpActionResult GetValve5Details(int id)
         {
@@ -117,15 +128,25 @@ namespace Simulator.Controllers.Api
             return NotFound();
         }
 
+
+
+
+
+        // POST METHODS
+
         [HttpPost]
         public IHttpActionResult TogglePump1(int id)
         {
-            foreach(Pump p in allItemViewModel.AllItemPump)
+            int chechId = 1;
+            if (chechId == id)
             {
-                if(p.Id == id)
+                foreach (Pump p in allItemViewModel.AllItemPump)
                 {
-                    machine.TogglePump1(id);
-                    return Ok("Pump " + id + " status has been changed");
+                    if (p.Id == id)
+                    {
+                        machine.TogglePump1(id);
+                        return Ok("Pump " + id + " status has been changed");
+                    }
                 }
             }
 
@@ -136,29 +157,36 @@ namespace Simulator.Controllers.Api
         [HttpPost]
         public IHttpActionResult ToggleValve1(int id)
         {
-            foreach (Valve v in allItemViewModel.AllItemValve)
+            int chechId = 1;
+            if (chechId == id)
             {
-                if(v.Id == id)
+                foreach (Valve v in allItemViewModel.AllItemValve)
                 {
-                    machine.ToggleValve1(id);
+                    if (v.Id == id)
+                    {
+                        machine.ToggleValve1(id);
 
-                    return Ok("Valve " + id + " status has been changed");
+                        return Ok("Valve " + id + " status has been changed");
+                    }
                 }
             }
-
             return NotFound();
         }
 
         [HttpPost]
         public IHttpActionResult ToggleValve2(int id)
         {
-            foreach (Valve v in allItemViewModel.AllItemValve)
+            int chechId = 2;
+            if (chechId == id)
             {
-                if (v.Id == id)
+                foreach (Valve v in allItemViewModel.AllItemValve)
                 {
-                    machine.ToggleValve2(id);
+                    if (v.Id == id)
+                    {
+                        machine.ToggleValve2(id);
 
-                    return Ok("Valve " + id + " status has been changed");
+                        return Ok("Valve " + id + " status has been changed");
+                    }
                 }
             }
 
@@ -168,13 +196,17 @@ namespace Simulator.Controllers.Api
         [HttpPost]
         public IHttpActionResult ToggleValve3(int id)
         {
-            foreach (Valve v in allItemViewModel.AllItemValve)
+            int chechId = 3;
+            if (chechId == id)
             {
-                if (v.Id == id)
+                foreach (Valve v in allItemViewModel.AllItemValve)
                 {
-                    machine.ToggleValve3(id);
+                    if (v.Id == id)
+                    {
+                        machine.ToggleValve3(id);
 
-                    return Ok("Valve " + id + " status has been changed");
+                        return Ok("Valve " + id + " status has been changed");
+                    }
                 }
             }
 
@@ -184,13 +216,17 @@ namespace Simulator.Controllers.Api
         [HttpPost]
         public IHttpActionResult ToggleValve4(int id)
         {
-            foreach (Valve v in allItemViewModel.AllItemValve)
+            int chechId = 4;
+            if (chechId == id)
             {
-                if (v.Id == id)
+                foreach (Valve v in allItemViewModel.AllItemValve)
                 {
-                    machine.ToggleValve4(id);
+                    if (v.Id == id)
+                    {
+                        machine.ToggleValve4(id);
 
-                    return Ok("Valve " + id + " status has been changed");
+                        return Ok("Valve " + id + " status has been changed");
+                    }
                 }
             }
 
@@ -200,29 +236,36 @@ namespace Simulator.Controllers.Api
         [HttpPost]
         public IHttpActionResult ToggleValve5(int id)
         {
-            foreach (Valve v in allItemViewModel.AllItemValve)
+            int chechId = 5;
+            if (chechId == id)
             {
-                if (v.Id == id)
+                foreach (Valve v in allItemViewModel.AllItemValve)
                 {
-                    machine.ToggleValve5(id);
+                    if (v.Id == id)
+                    {
+                        machine.ToggleValve5(id);
 
-                    return Ok("Valve " + id + " status has been changed");
+                        return Ok("Valve " + id + " status has been changed");
+                    }
                 }
             }
-
             return NotFound();
         }
 
         [HttpPost]
         public IHttpActionResult ReadyForEmpty(int id)
         {
-            foreach (Tank t in allItemViewModel.AllItemTank)
+            int chechId = 1;
+            if (chechId == id)
             {
-                if (t.Id == id)
+                foreach (Tank t in allItemViewModel.AllItemTank)
                 {
-                    machine.ReadyForEmpty(id);
+                    if (t.Id == id)
+                    {
+                        machine.ReadyForEmpty(id);
 
-                    return Ok("Valve " + id + " status has been changed");
+                        return Ok("Tank " + id + " ready for empty");
+                    }
                 }
             }
 
@@ -232,16 +275,19 @@ namespace Simulator.Controllers.Api
         [HttpPost]
         public IHttpActionResult ReadyForFill(int id)
         {
-            foreach (Tank t in allItemViewModel.AllItemTank)
+            int chechId = 1;
+            if (chechId == id)
             {
-                if (t.Id == id)
+                foreach (Tank t in allItemViewModel.AllItemTank)
                 {
-                    machine.ReadyForFill(id);
+                    if (t.Id == id)
+                    {
+                        machine.ReadyForFill(id);
 
-                    return Ok("Valve " + id + " status has been changed");
+                        return Ok("Tank " + id + " ready for fill");
+                    }
                 }
             }
-
             return NotFound();
         }
     }
