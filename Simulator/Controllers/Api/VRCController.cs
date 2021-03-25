@@ -17,7 +17,6 @@ namespace Simulator.Controllers.Api
 
 
 
-
         // GET METHODS
 
         [HttpGet]
