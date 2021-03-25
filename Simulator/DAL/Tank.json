@@ -3,6 +3,9 @@
     "Id": 1,
     "TankName": "VRCTank",
     "Status": 2,
-    "Fill": true
+    "ReadyForFill": false,
+    "ReadyForEmpty": false,
+    "FillTank": false,
+    "EmptyTank": false
   }
 ]

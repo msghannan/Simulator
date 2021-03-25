@@ -2,8 +2,8 @@
   {
     "Id": 1,
     "ValveName": null,
-    "Status": 1,
-    "Activatable": true,
+    "Status": 2,
+    "Activatable": false,
     "ValvePipeList": [
       {
         "Id": 1,
@@ -15,26 +15,26 @@
   {
     "Id": 2,
     "ValveName": null,
-    "Status": 1,
+    "Status": 2,
     "Activatable": true,
     "ValvePipeList": [
       {
         "Id": 3,
         "PipeName": "Pipe6Active",
-        "Status": 1
+        "Status": 2
       }
     ]
   },
   {
     "Id": 3,
     "ValveName": null,
-    "Status": 1,
+    "Status": 2,
     "Activatable": true,
     "ValvePipeList": [
       {
         "Id": 5,
         "PipeName": "Pipe4Active",
-        "Status": 1
+        "Status": 2
       }
     ]
   },
@@ -42,7 +42,7 @@
     "Id": 4,
     "ValveName": null,
     "Status": 2,
-    "Activatable": false,
+    "Activatable": true,
     "ValvePipeList": [
       {
         "Id": 4,
@@ -55,7 +55,7 @@
     "Id": 5,
     "ValveName": null,
     "Status": 1,
-    "Activatable": true,
+    "Activatable": false,
     "ValvePipeList": [
       {
         "Id": 9,
