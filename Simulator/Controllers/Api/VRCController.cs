@@ -12,6 +12,7 @@ namespace Simulator.Controllers.Api
     public class VRCController : ApiController
     {
         Machine machine = new Machine();
+        AllItemViewModel allItemViewModel = new AllItemViewModel();
 
         [HttpGet]
         public IHttpActionResult GetValve3Details(int id)
@@ -142,13 +143,6 @@ namespace Simulator.Controllers.Api
                     {
                         machine.ToggleValve2(id);
 
-                        return Ok("Valve " + id + " status has been changed");
-                    }
-                }
-            }
-
-            return NotFound();
-        }
                         return Ok("Valve " + id + " status has been changed");
                     }
                 }
