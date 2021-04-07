@@ -38,15 +38,32 @@ namespace Simulator.Controllers.Api
         }
 
         [HttpGet]
-        public IHttpActionResult GetTank1Details(int id)
+        public IHttpActionResult GetValve1Details(int id)
         {
-            var tankDetails = allItemViewModel.AllItemTank.Where(t => t.Id == id);
+            var valveDetails = allItemViewModel.AllItemValve.Where(v => v.Id == id);
             int idCheck = 1;
             if(idCheck == id)
             {
                 foreach(Valve v in allItemViewModel.AllItemValve)
                 {
                     if(v.Id == id)
+                    {
+                        return Ok(valveDetails);
+                    }
+                }
+            }
+            return NotFound();
+        }
+
+        public IHttpActionResult GetTank1Details(int id)
+        {
+            var tankDetails = allItemViewModel.AllItemTank.Where(t => t.Id == id);
+            int idCheck = 1;
+            if (idCheck == id)
+            {
+                foreach (Tank t in allItemViewModel.AllItemTank)
+                {
+                    if (t.Id == id)
                     {
                         return Ok(tankDetails);
                     }
