@@ -72,7 +72,7 @@ namespace Simulator.Controllers.Api
             }
             return NotFound();
         }
-
+        
         [HttpGet]
         public IHttpActionResult GetValve3Details(int id)
         {
