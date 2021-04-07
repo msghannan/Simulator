@@ -108,6 +108,24 @@ namespace Simulator.Controllers.Api
             }
             return NotFound();
         }
+        [HttpGet]
+        public IHttpActionResult GetAllValves()
+        {
+            var valveDetails = allItemViewModel.AllItemValve;
+            return Ok(valveDetails);
+        }
+        [HttpGet]
+        public IHttpActionResult GetAllPumps()
+        {
+            var pipeDetails = allItemViewModel.AllItemPump;
+            return Ok(pipeDetails);
+        }
+        [HttpGet]
+        public IHttpActionResult GetAllTanks()
+        {
+            var tankDetails = allItemViewModel.AllItemTank;
+            return Ok(tankDetails);
+        }
 
         [HttpGet]
         public IHttpActionResult GetValve5Details(int id)
