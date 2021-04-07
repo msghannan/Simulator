@@ -17,7 +17,7 @@ namespace Simulator.Controllers.Api
 
 
 
-        // GET METHODS
+        // GET METHODS Ny
 
         [HttpGet]
         public IHttpActionResult GetPump1Details(int id)
