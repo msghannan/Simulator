@@ -37,6 +37,23 @@ namespace Simulator.Controllers.Api
             return NotFound();
         }
 
+        public IHttpActionResult GetTank1Details(int id)
+        {
+            var tankDetails = allItemViewModel.AllItemTank.Where(t => t.Id == id);
+            int idCheck = 1;
+            if (idCheck == id)
+            {
+                foreach (Tank t in allItemViewModel.AllItemTank)
+                {
+                    if (t.Id == id)
+                    {
+                        return Ok(tankDetails);
+                    }
+                }
+            }
+            return NotFound();
+        }
+
         [HttpGet]
         public IHttpActionResult GetValve1Details(int id)
         {
@@ -49,23 +66,6 @@ namespace Simulator.Controllers.Api
                     if(v.Id == id)
                     {
                         return Ok(valveDetails);
-                    }
-                }
-            }
-            return NotFound();
-        }
-
-        public IHttpActionResult GetTank1Details(int id)
-        {
-            var tankDetails = allItemViewModel.AllItemTank.Where(t => t.Id == id);
-            int idCheck = 1;
-            if (idCheck == id)
-            {
-                foreach (Tank t in allItemViewModel.AllItemTank)
-                {
-                    if (t.Id == id)
-                    {
-                        return Ok(tankDetails);
                     }
                 }
             }
@@ -125,24 +125,6 @@ namespace Simulator.Controllers.Api
             }
             return NotFound();
         }
-        [HttpGet]
-        public IHttpActionResult GetAllValves()
-        {
-            var valveDetails = allItemViewModel.AllItemValve;
-            return Ok(valveDetails);
-        }
-        [HttpGet]
-        public IHttpActionResult GetAllPumps()
-        {
-            var pipeDetails = allItemViewModel.AllItemPump;
-            return Ok(pipeDetails);
-        }
-        [HttpGet]
-        public IHttpActionResult GetAllTanks()
-        {
-            var tankDetails = allItemViewModel.AllItemTank;
-            return Ok(tankDetails);
-        }
 
         [HttpGet]
         public IHttpActionResult GetValve5Details(int id)
@@ -160,6 +142,25 @@ namespace Simulator.Controllers.Api
                 }
             }
             return NotFound();
+        }
+
+        [HttpGet]
+        public IHttpActionResult GetAllValves()
+        {
+            var valveDetails = allItemViewModel.AllItemValve;
+            return Ok(valveDetails);
+        }
+        [HttpGet]
+        public IHttpActionResult GetAllPumps()
+        {
+            var pipeDetails = allItemViewModel.AllItemPump;
+            return Ok(pipeDetails);
+        }
+        [HttpGet]
+        public IHttpActionResult GetAllTanks()
+        {
+            var tankDetails = allItemViewModel.AllItemTank;
+            return Ok(tankDetails);
         }
 
 
