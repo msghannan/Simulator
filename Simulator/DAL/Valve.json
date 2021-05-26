@@ -54,13 +54,13 @@
   {
     "Id": 5,
     "ValveName": null,
-    "Status": 1,
+    "Status": 2,
     "Activatable": false,
     "ValvePipeList": [
       {
         "Id": 9,
         "PipeName": "Pipe3Active",
-        "Status": 1
+        "Status": 2
       }
     ]
   }
