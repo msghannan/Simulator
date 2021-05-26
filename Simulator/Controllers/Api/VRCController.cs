@@ -172,8 +172,8 @@ namespace Simulator.Controllers.Api
         [HttpPost]
         public IHttpActionResult TogglePump1(int id)
         {
-            int chechId = 1;
-            if (chechId == id)
+            int checkId = 1;
+            if (checkId == id)
             {
                 foreach (Pump p in allItemViewModel.AllItemPump)
                 {
@@ -192,8 +192,8 @@ namespace Simulator.Controllers.Api
         [HttpPost]
         public IHttpActionResult ToggleValve1(int id)
         {
-            int chechId = 1;
-            if (chechId == id)
+            int checkId = 1;
+            if (checkId == id)
             {
                 foreach (Valve v in allItemViewModel.AllItemValve)
                 {
@@ -211,8 +211,8 @@ namespace Simulator.Controllers.Api
         [HttpPost]
         public IHttpActionResult ToggleValve2(int id)
         {
-            int chechId = 2;
-            if (chechId == id)
+            int checkId = 2;
+            if (checkId == id)
             {
                 foreach (Valve v in allItemViewModel.AllItemValve)
                 {
@@ -231,8 +231,8 @@ namespace Simulator.Controllers.Api
         [HttpPost]
         public IHttpActionResult ToggleValve3(int id)
         {
-            int chechId = 3;
-            if (chechId == id)
+            int checkId = 3;
+            if (checkId == id)
             {
                 foreach (Valve v in allItemViewModel.AllItemValve)
                 {
@@ -251,8 +251,8 @@ namespace Simulator.Controllers.Api
         [HttpPost]
         public IHttpActionResult ToggleValve4(int id)
         {
-            int chechId = 4;
-            if (chechId == id)
+            int checkId = 4;
+            if (checkId == id)
             {
                 foreach (Valve v in allItemViewModel.AllItemValve)
                 {
@@ -271,8 +271,8 @@ namespace Simulator.Controllers.Api
         [HttpPost]
         public IHttpActionResult ToggleValve5(int id)
         {
-            int chechId = 5;
-            if (chechId == id)
+            int checkId = 5;
+            if (checkId == id)
             {
                 foreach (Valve v in allItemViewModel.AllItemValve)
                 {
@@ -290,8 +290,8 @@ namespace Simulator.Controllers.Api
         [HttpPost]
         public IHttpActionResult ReadyForEmpty(int id)
         {
-            int chechId = 1;
-            if (chechId == id)
+            int checkId = 1;
+            if (checkId == id)
             {
                 foreach (Tank t in allItemViewModel.AllItemTank)
                 {
@@ -310,8 +310,8 @@ namespace Simulator.Controllers.Api
         [HttpPost]
         public IHttpActionResult ReadyForFill(int id)
         {
-            int chechId = 1;
-            if (chechId == id)
+            int checkId = 1;
+            if (checkId == id)
             {
                 foreach (Tank t in allItemViewModel.AllItemTank)
                 {
